@@ -1,17 +1,52 @@
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/src/img/logoCMSR.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
-    </a>
-    <a class="navbar-brand" href="#">
-      Medicos
-    </a>
-    <a class="navbar-brand" href="#">
-      Especialidades
-    </a>
-    <a class="navbar-brand" href="#">
-      Servicios
-    </a>
-  </div>
+<nav class="navbar navbar-expand-xl bg-light" style="z-index: 1000;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://scontent.fsti5-1.fna.fbcdn.net/v/t39.30808-6/313143048_6036425923057601_4956830631147707_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF_HnWF2aYjg04SSXeRXD6F_JnNtDKp5L_8mc20Mqnkv41FGws8Fca3viYxQ4zgJTbhC03HiPpewwB7bXgBBaQm&_nc_ohc=mp65no_3scYQ7kNvgET9Jjr&_nc_ht=scontent.fsti5-1.fna&oh=00_AYAaI_RH_wGy3aYGwg4dMYjqkPnX1740l9TYP0seUlmxag&oe=66B73FAB"
+                alt="Logo" width="90" height="80" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/servicios" routerLinkActive="active">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/resultados" routerLinkActive="active">Resultados</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
+<router-outlet></router-outlet>
+
+<style>
+    .navbar-nav .nav-link {
+        border: 2px solid transparent;
+        border-radius: 15px;
+        padding: 5px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+        border-color: gray;
+        background-color: #f8f9fa;
+    }
+
+    .navbar-nav .nav-link.active {
+        border-color: gray;
+        background-color: #e9ecef;
+        /* Color de fondo para el enlace activo */
+    }
+</style>
