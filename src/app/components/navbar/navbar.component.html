@@ -9,7 +9,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row flex-wrap gap-3">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/inicio" routerLinkActive="active">Inicio</a>
                 </li>
@@ -47,6 +47,12 @@
     .navbar-nav .nav-link.active {
         border-color: gray;
         background-color: #e9ecef;
-        /* Color de fondo para el enlace activo */
+        /* Background color for the active link */
+    }
+
+    @media (max-width: 768px) {
+        .navbar-nav {
+            flex-direction: column;
+        }
     }
 </style>
