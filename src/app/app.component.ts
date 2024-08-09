@@ -7,12 +7,13 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { CommonModule } from '@angular/common';
+import { FlagNavComponent } from './components/flag-nav/flag-nav.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLink, NavbarComponent, ServiciosComponent],
+  imports: [RouterOutlet, CommonModule, RouterLink, FlagNavComponent, NavbarComponent, ServiciosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 

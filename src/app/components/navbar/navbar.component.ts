@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ServiciosComponent } from '../servicios/servicios.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
