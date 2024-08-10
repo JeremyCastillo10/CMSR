@@ -13,7 +13,7 @@ import { FlagNavComponent } from './components/flag-nav/flag-nav.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLink, FlagNavComponent, NavbarComponent, ServiciosComponent],
+  imports: [RouterOutlet, CommonModule, RouterLink, NavbarComponent, InicioComponent, NosotrosComponent, ServiciosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
