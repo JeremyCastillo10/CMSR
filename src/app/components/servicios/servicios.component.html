@@ -1,0 +1,27 @@
+<section class="">
+    <div class="mx-auto max-w-xl px-4 py-10 text-gray-600 lg:max-w-screen-lg">
+        <h2 class="mb-8 text-3xl font-bold text-black lg:mb-20 lg:text-center lg:text-5xl">Nuestro servicios</h2>
+        <div class="flex flex-col lg:flex-row">
+            <div class="self-center pr-5 lg:w-1/2">
+                <p class="mb-4 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eos amet laborum
+                    iste distinctio modi soluta fuga officia odio laudantium?</p>
+                <p class="mb-4 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis et
+                    maiores ex numquam repellat? Iure, illum illo nisi explicabo deleniti amet sapiente repudiandae
+                    blanditiis ullam esse nostrum neque eveniet impedit nesciunt, sint inventore reprehenderit cumque!
+                    Vero dolor facere cumque ad.</p>
+                <hr class="mt-8 h-2 w-20 transform border-none bg-teal-200" />
+            </div>
+            <div class="mt-8 grid flex-wrap gap-y-8 sm:grid-cols-2 lg:mt-0 lg:ml-4 lg:w-1/2 lg:gap-y-10">
+                <div *ngFor="let card of cardDataServicios" class="flex items-center">
+                    <div class="mr-3 rounded-full p-6 text-7xl text-teal-800"
+                        style="background-color: rgb(32, 112, 193);">
+                        <fa-icon class="fas " style="color: aliceblue;" [icon]="card.icon"></fa-icon>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-base font-medium text-gray-600">{{ card.title }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
