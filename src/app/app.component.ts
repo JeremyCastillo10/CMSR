@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
@@ -10,12 +10,16 @@ import { CommonModule } from '@angular/common';
 import { FlagNavComponent } from './components/flag-nav/flag-nav.component';
 import { NgModule } from '@angular/core';
 import { SeccionMedicosComponent } from './components/seccion-medicos/seccion-medicos.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NosotrosStatsComponent } from './components/nosotros-stats/nosotros-stats.component';
+import { NosotrosScreenComponent } from './screens/nosotros-screen/nosotros-screen.component';
+import { HomeScreenComponent } from "./screens/home-screen/home-screen.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RouterLink, NavbarComponent, InicioComponent, NosotrosComponent, SeccionMedicosComponent, ServiciosComponent],
+  imports: [RouterOutlet, CommonModule, RouterLink, RouterLinkActive, HomeScreenComponent, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 

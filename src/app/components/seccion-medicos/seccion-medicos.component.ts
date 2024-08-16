@@ -14,44 +14,44 @@ export class SeccionMedicosComponent {
     {
       nombre: 'Dra. Ana María Aguasvivas Mata',
       profesion: 'Dermatóloga-Cirujana',
-      descripcion: 'Egresada de la Universidad Católica Nordestana UCNE, cuenta con un Post grado en el Instituto Dermatológico Dominicano y Cirugía de Piel Dr. Huberto Bogaert Díaz IDCP, con sub especialidad en Cirugía Dermatológica',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Ana-Maria-400x497.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/pTTQNQzR/Ana-Maria-400x497.jpg'
     },
     {
       nombre: 'Dr. Luis Antonio García Cuevas',
       profesion: 'Cirujano Ortopeda Traumatología',
-      descripcion: 'Tratamientos de las Enfermedades y cirugía de columna',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Luis-Ant.-Garcia-200x300.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/d0nRSN75/pixelcut-export.jpg'
     },
     {
-      nombre: 'Dra. Onaney Díaz',
+      nombre: 'Dra.Onaney Díaz',
       profesion: 'Médico Internista - Geriatra',
-      descripcion: 'Es egresada de Médico General de la Universidad Católica Nordestana, luego realiza sus estudios de post grado de Medicina Interna y Geriatría en el Hospital Universitario José María Cabral y Baez y en el Federico Trilla de Puerto Rico',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Onaney-Diaz-200x305.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/K4XtgdV8/onaney.jpg'
     },
     {
       nombre: 'Karlen Fajardo',
       profesion: 'Dermatóloga-Cirujana',
-      descripcion: 'Dermatólog',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Karen-2-400x500.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/05z3DD3T/karen.jpg'
     },
     {
-      nombre: 'Dr. Rafael Santos',
+      nombre: 'Dr.Rafael Santos',
       profesion: 'Pediatra',
-      descripcion: 'Pediatría general, crecimiento y desarrollo del niño sano',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/RAFAEL-SANTOS-400x479.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/SQHPrjbJ/RAFAEL-SANTOS-400x479.jpg'
     },
     {
-      nombre: 'Dra. Nadia Natasha Ferreiras',
+      nombre: 'Dra.Nadia Natasha Ferreiras',
       profesion: 'Pediatra-Cirujano Pediatra',
-      descripcion: 'Pediatra-Cirujano Pediatra',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Natasha-Ferreiras-2-200x313.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/HxR6BvKf/ferreiras.jpg'
     },
     {
       nombre: 'Madeline Frías',
       profesion: 'Psicóloga Clínica',
-      descripcion: 'Psicóloga Clínica',
-      imagenUrl: 'https://sanrafaelrd.com/wp-content/uploads/2022/08/Madeline-Frias-200x271.jpg'
+      descripcion: '',
+      imagenUrl: 'https://i.postimg.cc/Xq5Qhc6X/Madeline-Frias-200x271.png'
     },
   ]
 }

@@ -1,6 +1,6 @@
-<!-- Hero section with background image, heading, subheading and button -->
-<div
-    class="relative h-[690px] overflow-hidden bg-[url('https://www.newmedicaleconomics.es/wp-content/uploads/2023/03/me-alegro-que-hayamos-llegado-acuerdo-scaled.jpg')] bg-cover bg-[50%] bg-no-repeat">
+<!-- Hero section with dynamic background image -->
+<div [ngStyle]="{'background-image': 'url(' + currentImage + ')'}"
+    class="relative h-[690px] overflow-hidden bg-cover bg-center bg-no-repeat">
     <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
         <div class="flex h-full items-center justify-center">
             <div class="px-6 text-center text-white md:px-12">

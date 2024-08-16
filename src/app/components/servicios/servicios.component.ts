@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUsersRays, faFlaskVial, faAmbulance, faBedPulse, } from '@fortawesome/free-solid-svg-icons';
+import { faXRay, faFlaskVial, faAmbulance, faBedPulse, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-servicios',
   standalone: true,
-  imports: [NgFor, FontAwesomeModule],
+  imports: [NgFor, FontAwesomeModule, MatIconModule],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
 })
@@ -24,16 +25,13 @@ export class ServiciosComponent {
       icon: faFlaskVial, // Icono Font Awesome
     },
     {
-      title: 'TOMOGRAFIA',
-      icon: faUsersRays, // Icono Font Awesome
+      title: 'Estudios de Imagen(rayosX, sonografia, tomografia)',
+      icon: faXRay, // Icono Font Awesome
     },
     {
-      title: 'EMERGENCIA MEDICA',
-      icon: faAmbulance, // Icono Font Awesome
+      title: 'CONSULTAS ESPECIALIZADAS',
+      icon: faUserDoctor, // Icono Font Awesome
     },
-    {
-      title: 'EMERGENCIA MEDICA',
-      icon: faAmbulance, // Icono Font Awesome
-    },
+
   ];
 }
