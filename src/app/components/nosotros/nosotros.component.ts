@@ -3,11 +3,12 @@ import { CardData } from '../../models/nosotroscard';
 import { NgFor } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBuilding, faUserDoctor, faClock, faCapsules, } from '@fortawesome/free-solid-svg-icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nosotros',
   standalone: true,
-  imports: [NgFor, FontAwesomeModule],
+  imports: [NgFor, FontAwesomeModule, RouterLink],
   templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.css'
 })

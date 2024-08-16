@@ -1,1 +1,46 @@
-<p>contacto works!</p>
+<!-- ContactComponent.html -->
+<div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-stretch">
+            <!-- Formulario de contacto -->
+            <div class="flex-1 lg:pr-8 flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 font-mono">Contáctanos</h2>
+                <p class="text-base text-gray-700 mb-8 font-mono">
+                    Para consultas o preguntas, por favor usa el formulario o llámanos al
+                    <a href="tel:+18095878050" class="text-blue-600 hover:underline">809-587-8050</a>
+                    o escríbenos a
+                    <a href="mailto:cmsr@cmsr.com.do" class="text-blue-600 hover:underline">cmsr&#64;cmsr.com.do</a>.
+                </p>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 font-mono">Nombre</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 px-4 py-2">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 font-mono">Correo
+                            electrónico</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 px-4 py-2">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 font-mono">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 px-4 py-2"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Imagen del teléfono -->
+            <div class="flex-1 lg:pl-8 mt-8 lg:mt-0 flex items-center">
+                <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/03/telefono-fijo-oficina-2631465.jpg"
+                    alt="Teléfono" class="w-full h-full object-cover min-h-[500px]">
+            </div>
+        </div>
+    </div>
+</div>

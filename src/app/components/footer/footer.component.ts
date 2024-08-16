@@ -6,11 +6,12 @@ import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/fre
 
 import { faXRay, faFlaskVial, faAmbulance, faBedPulse, faUserDoctor } from '@fortawesome/free-solid-svg-icons';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [NgFor, FontAwesomeModule, MatIconModule],
+  imports: [NgFor, FontAwesomeModule, MatIconModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

@@ -13,6 +13,10 @@ import { MatIconModule } from '@angular/material/icon';
 })
 
 export class ServicesScreenComponent {
+  CardSucursales: any;
+  getGoogleMapsLink(arg0: any) {
+    throw new Error('Method not implemented.');
+  }
   cardDataServiciosScreen = [
     {
       title: 'EMERGENCIA MEDICA',

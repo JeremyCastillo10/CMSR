@@ -1,5 +1,6 @@
-<div class="mx-auto max-w-full px-4 py-10 text-gray-600 lg:px-8 lg:py-16" style="background-color: rgb(236, 236, 236);">
-    <h2 class="mb-8 text-3xl font-bold text-black lg:mb-12 lg:text-center lg:text-5xl">Nuestros servicios</h2>
+<div class="mx-auto max-w-full px-4 py-10 lg:px-8 lg:py-16 font-monospace"
+    style="background-color: rgb(255, 255, 255);">
+    <h2 class="mb-8 text-3xl text-blue-400 lg:mb-12 lg:text-center lg:text-5xl">Nuestros servicios</h2>
     <div class="flex justify-center lg:justify-start">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             <div *ngFor="let card of cardDataServiciosScreen" class="flex flex-col items-center text-center">
@@ -7,7 +8,7 @@
                     style="background-color: rgb(66, 138, 210);">
                     <fa-icon class="" style="color: rgb(255, 255, 255);" [icon]="card.icon"></fa-icon>
                 </div>
-                <p class="text-base font-medium text-black">{{ card.title }}</p>
+                <p class="text-base font-monospace text-black">{{ card.title }}</p>
             </div>
         </div>
     </div>

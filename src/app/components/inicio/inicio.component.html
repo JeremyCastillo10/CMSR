@@ -1,17 +1,18 @@
 <!-- Hero section with dynamic background image -->
 <div [ngStyle]="{'background-image': 'url(' + currentImage + ')'}"
-    class="relative h-[690px] overflow-hidden bg-cover bg-center bg-no-repeat">
+    class="relative h-[690px] overflow-hidden bg-cover bg-center bg-no-repeat" role="banner"
+    aria-label="Hero Section - Centro Médico San Rafael">
     <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
         <div class="flex h-full items-center justify-center">
             <div class="px-6 text-center text-white md:px-12">
                 <h1 class="mb-6 text-5xl font-bold">El Centro Médico Con Alma</h1>
-                <h3 class="mb-8 text-3xl font-bold">Centro Medico San Rafael se enfoca en usted como si fuera nuestra
+                <h3 class="mb-8 text-3xl font-bold">Centro Médico San Rafael se enfoca en usted como si fuera nuestra
                     propia familia.</h3>
-                <button type="button"
+                <a type="button" target="_blank" href="http://cmsr.autana.services/landing/"
                     class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
-                    data-twe-ripple-init data-twe-ripple-color="light">
-                    Resultados en Linea
-                </button>
+                    data-twe-ripple-init data-twe-ripple-color="light" aria-label="Ver resultados en línea">
+                    Resultados en Línea
+                </a>
             </div>
         </div>
     </div>

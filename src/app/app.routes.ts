@@ -14,6 +14,7 @@ export const routes: Routes = [
     { path: 'nosotros', component: NosotrosScreenComponent },
     { path: 'servicios', component: ServicesScreenComponent },
     { path: 'surcursales', component: SucursalesScreenComponent },
+    { path: 'contacto', component: ContactoComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
