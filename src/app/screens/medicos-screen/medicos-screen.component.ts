@@ -1,22 +1,54 @@
 import { Component } from '@angular/core';
-import { CardMedicos } from '../../models/medicos';
-import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
+import { CommonModule, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-seccion-medicos',
+  selector: 'app-medicos-screen',
   standalone: true,
-  imports: [NgFor],
-  templateUrl: './seccion-medicos.component.html',
-  styleUrl: './seccion-medicos.component.css'
+  imports: [NgFor, CommonModule, FormsModule],
+  templateUrl: './medicos-screen.component.html',
+  styleUrls: ['./medicos-screen.component.css']
 })
+export class MedicosScreenComponent {
+  searchTerm: string = '';
+  selectedEspecialidad: string = '';
+  especialidades: string[] = [
+    'Anestesia General',
+    'Anestesia Pediátrica',
+    'Cardiología/Hemodinamista',
+    'Cardiología Pediátrica',
+    'Cirugía Vascular',
+    'Cirugía General',
+    'Cirugía Pediátrica',
+    'Cirugía Maxilofacial',
+    'Dermatología',
+    'Cirugía Facial',
+    'Diabetología',
+    'Endocrinología',
+    'Gastroenterología Pediátrico',
+    'Gastroenterología',
+    'Geriatría',
+    'Gineco-Obstetricia',
+    'Intensivista',
+    'Medicina Interna',
+    'Medicina Familiar',
+    'Neonatología',
+    'Neumología',
+    'Neurología',
+    'Neurocirugía',
+    'Ortopedia',
+    'Traumatología',
+    'Ortopedia Pediátrica',
+    'Otorrinolaringología',
+    'Oftalmología',
+    'Pediatría',
+    'Psiquiatría',
+    'Psicología',
+    'Urología',
+    'Nefrología',
 
-export class SeccionMedicosComponent {
-  visibleCardList: any[] = [];
-
-  ngOnInit(): void {
-    // Suponiendo que CardListMedicos ya está inicializada con datos
-    this.visibleCardList = this.CardListMedicos.slice(0, 8);
-  }
+  ];
   CardListMedicos = [
     { id: '1', nombre: 'Dra. Ana María Aguasvivas Mata', especialidad: 'Dermatología y Cirugía Facial', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/Ana-Maria-400x497.jpg' },
     { id: '2', nombre: 'Dr. Luis Antonio García Cuevas', especialidad: 'Ortopedia y Traumatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/dr cuevas.jpg' },
@@ -47,7 +79,7 @@ export class SeccionMedicosComponent {
     { id: '27', nombre: 'Dr. Hamlet Then', especialidad: 'Cirugía Maxilofacial', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/HamletThen.jpg' },
     { id: '28', nombre: 'Dr. Carlos Martínez', especialidad: 'Diabetología y Endocrinología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/CarlosMartinez.jpg' },
     { id: '29', nombre: 'Dra. Adalnaurys Payano', especialidad: 'Diabetología y Endocrinología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/AldanaurysPayano.jpg' },
-    { id: '30', nombre: 'Dr. Pedro Mercado', especialidad: 'Gastroenterología Pediátrica', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/PedroMercado.jpg' },
+    { id: '30', nombre: 'Dr. Pedro Mercado', especialidad: 'Gastroenterología Pediátrico', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/PedroMercado.jpg' },
     { id: '31', nombre: 'Dr. Rodrigo Escolástico', especialidad: 'Gastroenterología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/RodrigoEscolasticos.jpg' },
     { id: '32', nombre: 'Dra. María De La Cruz', especialidad: 'Gastroenterología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/MariaDeLaCruz.jpg' },
     { id: '33', nombre: 'Dra. Hernández', especialidad: 'Geriatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/DRAHernandez.jpg' },
@@ -63,23 +95,46 @@ export class SeccionMedicosComponent {
     { id: '43', nombre: 'Dra. Mayra Rojas', especialidad: 'Medicina Interna', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/MayraRojas.jpg' },
     { id: '44', nombre: 'Dra. Kenia Villanueva', especialidad: 'Medicina Familiar', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/KeniaVillanueva.jpg' },
     { id: '45', nombre: 'Dr. Benito Capellán', especialidad: 'Medicina Familiar', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/BenitoCapellan.jpg' },
-    { id: '46', nombre: 'Dra. Verenice Acosta', especialidad: 'Neonatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/vereniceAcosta.jpg' },
+    { id: '46', nombre: 'Dra. Verenice Acosta', especialidad: 'Pediatría y Neonatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/vereniceAcosta.jpg' },
     { id: '47', nombre: 'Dra. Tomelyn Padilla', especialidad: 'Neumología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/TomelynPadilla.jpg' },
     { id: '48', nombre: 'Dr. Juan Tejada', especialidad: 'Neumología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JuanTejada.jpg' },
     { id: '49', nombre: 'Dra. María Tereza Peña', especialidad: 'Neurología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/MariaTereza.jpg' },
     { id: '50', nombre: 'Dr. José Plasencia', especialidad: 'Neurocirugía', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JosePlasencia.jpg' },
     { id: '51', nombre: 'Dr. Juan David Suárez', especialidad: 'Neurocirugía', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/DavidSuarez.jpg' },
-    { id: '52', nombre: 'Dr. Luis García', especialidad: 'Ortopedia y Traumatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/LuisGarcia.jpg' },
-    { id: '53', nombre: 'Dr. Dario Lazala', especialidad: 'Ortopedia y Traumatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/DarioLazala.jpg' },
-    { id: '54', nombre: 'Dra. Soraida Cruz', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/SoraidaCruz.jpg' },
-    { id: '55', nombre: 'Dr. Edwin Martínez', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/EdwinMartinez.jpg' },
-    { id: '56', nombre: 'Dra. Maricruz Rosario', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/MaricruzRosario.jpg' },
-    { id: '57', nombre: 'Dra. Carolina Herrera', especialidad: 'Ortopedia Pediátrica', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/CarolinaHerrera.jpg' },
-    { id: '58', nombre: 'Dra. Jeni Hernandez', especialidad: 'Otorrinolaringología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JeniHernandez.jpg' },
-    { id: '59', nombre: 'Dr. Juan Carlos Disla', especialidad: 'Oftalmología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JuanCarlosDisla.jpg' },
-    { id: '60', nombre: 'Dra. Verenice Acosta', especialidad: 'Pediatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/VereniceAcosta.jpg' },
-    { id: '61', nombre: 'Dra. Isabel Ortega', especialidad: 'Pediatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/IsabelOrtega.jpg' },
-    { id: '62', nombre: 'Dra. Alixandra Mora', especialidad: 'Pediatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/AlixandraMora.jpg' },
-    { id: '63', nombre: 'Dra. Orfelina Suero', especialidad: 'Psiquiatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/OrfelinaSuero.jpg' }
-  ]
+    { id: '52', nombre: 'Dr. Dario Lazala', especialidad: 'Ortopedia y Traumatología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/DarioLazala.jpg' },
+    { id: '53', nombre: 'Dra. Soraida Cruz', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/SoraidaCruz.jpg' },
+    { id: '54', nombre: 'Dr. Edwin Martínez', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/EdwinMartinez.jpg' },
+    { id: '55', nombre: 'Dra. Maricruz Rosario', especialidad: 'Urología & Nefrología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/MaricruzRosario.jpg' },
+    { id: '56', nombre: 'Dra. Carolina Herrera', especialidad: 'Ortopedia Pediátrica', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/CarolinaHerrera.jpg' },
+    { id: '57', nombre: 'Dra. Jeni Hernandez', especialidad: 'Otorrinolaringología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JeniHernandez.jpg' },
+    { id: '58', nombre: 'Dr. Juan Carlos Disla', especialidad: 'Oftalmología', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/JuanCarlosDisla.jpg' },
+    { id: '60', nombre: 'Dra. Isabel Ortega', especialidad: 'Pediatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/IsabelOrtega.jpg' },
+    { id: '61', nombre: 'Dra. Alixandra Mora', especialidad: 'Pediatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/AlixandraMora.jpg' },
+    { id: '62', nombre: 'Dra. Orfelina Suero', especialidad: 'Psiquiatría', descripcion: '', imagenUrl: 'https://sanrafaelrd.com/RecursosDeLaWeb/medicos/OrfelinaSuero.jpg' }
+  ];
+
+  constructor(private router: Router) { }
+
+  get especialidadesDisponibles() {
+    const especialidades = this.CardListMedicos.map(medico => medico.especialidad);
+    return Array.from(new Set(especialidades)); // Elimina duplicados
+  }
+
+  get filteredMedicos() {
+    const searchTermLower = this.searchTerm.trim().toLowerCase();
+    return this.CardListMedicos.filter(medico => {
+      const matchesNombre = medico.nombre.toLowerCase().includes(searchTermLower);
+      const matchesEspecialidad = medico.especialidad.toLowerCase().includes(searchTermLower);
+      const matchesSelectedEspecialidad = !this.selectedEspecialidad || medico.especialidad.toLowerCase().includes(this.selectedEspecialidad.toLowerCase());
+      return (matchesNombre || matchesEspecialidad) && matchesSelectedEspecialidad;
+    });
+  }
+
+  onInputFocus() {
+    this.selectedEspecialidad = ''; // Borra el valor del ComboBox
+  }
+
+  goToDoctorDetail(doctorId: string) {
+    this.router.navigate(['/medicoDetalle', doctorId]);
+  }
 }

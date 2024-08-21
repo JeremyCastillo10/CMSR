@@ -2,8 +2,8 @@
     <div class="flex items-center justify-between w-full px-2">
         <!-- Logo Section -->
         <a class="flex items-center space-x-1" href="#">
-            <img class="" style="width: 110px;" height="100px" src="https://i.postimg.cc/1tdhWDct/cmsrlogooo.png"
-                loading="lazy" />
+            <img class="" style="width: 110px;" height="100px"
+                src="https://sanrafaelrd.com/RecursosDeLaWeb/navbar/logoNavbar.png" loading="lazy" />
         </a>
 
         <!-- Hamburger Icon -->
@@ -21,29 +21,31 @@
         <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="w-full md:flex md:items-center md:w-auto"
             id="navbar-default">
             <div
-                class="flex flex-col p-4 md:p-0 mt-4 font-monospace border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-                <a routerLink="/home" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Inicio</a>
-                <a routerLink="/nosotros" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Nosotros</a>
-                <a routerLink="/servicios" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Servicios</a>
-                <a routerLink="/Vacantes" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Vacantes</a>
-                <a routerLink="/surcursales" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Sucursales</a>
-                <a routerLink="/contacto" routerLinkActive="bg-blue-300 rounded-full"
-                    class="relative px-3 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300 before:absolute before:inset-0 before:border-2 before:border-gray-300 before:rounded-full before:opacity-0 hover:before:opacity-100 ">Contacto</a>
+                class="flex flex-col p-4 md:p-0 mt-4 font-monospace border border-gray-100 rounded-lg bg-gray-50 md:space-x-2 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                <!-- Links -->
+                <div class="flex flex-col md:flex-row md:space-x-2">
+                    <a routerLink="/home" routerLinkActive="bg-blue-300 rounded-full"
+                        class="relative px-2 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300">Inicio</a>
+                    <a routerLink="/nosotros" routerLinkActive="bg-blue-300 rounded-full"
+                        class="relative px-2 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300">Nosotros</a>
+                    <a routerLink="/servicios" routerLinkActive="bg-blue-300 rounded-full"
+                        class="relative px-2 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300">Servicios</a>
+                    <a routerLink="/medicos" routerLinkActive="bg-blue-300 rounded-full"
+                        class="relative px-2 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300">Especialistas</a>
+                    <a routerLink="/surcursales" routerLinkActive="bg-blue-300 rounded-full"
+                        class="relative px-2 py-2 text-gray-800 font-monospace hover:text-blue-700 transition duration-300">Sucursales</a>
+                </div>
 
-                <a routerLink="/resultados-laboratorio" routerLinkActive="bg-blue-300"
-                    class="relative px-4 py-2 text-white bg-blue-500 font-monospace rounded-full hover:bg-blue-700 transition duration-300 border-2 border-blue-500">
-                    Resultados laboratorio
-                </a>
+                <!-- Resultados Buttons -->
+                <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 mt-4 md:mt-0">
+                    <a href="https://sanrafael.probeta.com/" target="_blank"
+                        class="relative px-3 py-2 text-white bg-blue-500 font-monospace rounded-full hover:bg-blue-700 transition duration-300 border-2 border-blue-500">Resultados
+                        laboratorio</a>
 
-                <a routerLink="/resultados-imagenes" routerLinkActive="bg-blue-300"
-                    class="relative px-4 py-2 text-white bg-blue-500 font-monospace rounded-full hover:bg-blue-700 transition duration-300 border-2 border-blue-500">
-                    Resultados Imágenes
-                </a>
+                    <a href="http://cmsr.autana.services/landing/" target="_blank"
+                        class="relative px-3 py-2 text-white bg-blue-500 font-monospace rounded-full hover:bg-blue-700 transition duration-300 border-2 border-blue-500">Resultados
+                        Imágenes</a>
+                </div>
             </div>
         </div>
     </div>

@@ -11,10 +11,9 @@ import { RouterLink } from '@angular/router';
 })
 export class InicioComponent {
   images: string[] = [
-    'https://i.postimg.cc/HnWXxMyT/inaugura.jpg',
-    'https://i.postimg.cc/nzHHQP6B/pixelcut-export.png',
-    'https://i.postimg.cc/85RxG2hq/Instalacion-CMSR.jpg',
-    'https://i.postimg.cc/TYyk5xyf/InicioDR.jpg'
+    'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/inauguracion.jpg',
+    'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/Instalacion-CMSR.jpg',
+    'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/InicioDR (1).jpg'
   ];
   currentImage: string = this.images[0];
   private imageIndex: number = 0;

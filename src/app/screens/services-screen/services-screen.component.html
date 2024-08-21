@@ -1,14 +1,35 @@
-<div class="mx-auto max-w-full px-4 py-10 lg:px-8 lg:py-16 font-monospace"
-    style="background-color: rgb(255, 255, 255);">
-    <h2 class="mb-8 text-3xl text-blue-400 lg:mb-12 lg:text-center lg:text-5xl">Nuestros servicios</h2>
-    <div class="flex justify-center lg:justify-start">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-            <div *ngFor="let card of cardDataServiciosScreen" class="flex flex-col items-center text-center">
-                <div class="flex items-center justify-center mb-3 mt-4 rounded-full p-5 text-5xl text-teal-800"
-                    style="background-color: rgb(66, 138, 210);">
-                    <fa-icon class="" style="color: rgb(255, 255, 255);" [icon]="card.icon"></fa-icon>
+<!-- Contenedor de la imagen de fondo y campo de búsqueda -->
+<div class="relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('https://sanrafaelrd.com/RecursosDeLaWeb/baner/banerr.jpg'); height: 250px;">
+    <!-- Overlay para mejorar la visibilidad del campo de búsqueda -->
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+    <!-- Contenedor del campo de búsqueda -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-4xl">
+            <!-- Campo de búsqueda -->
+            <input type="text" placeholder="Buscar por servicio" [(ngModel)]="searchTerm"
+                class="w-full px-8 py-4 text-sm shadow-md focus:outline-none focus:ring-4 focus:ring-blue-400 focus:border-transparent transition-all duration-300 ease-in-out" />
+        </div>
+    </div>
+</div>
+
+<!-- Tarjetas de servicios (fuera del contenedor de la imagen) -->
+<div class="px-4 py-8 sm:px-6 md:px-12 lg:px-24 xl:px-32">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div *ngFor="let card of filteredServicios" class="w-full max-w-xs mx-auto" aria-label="Service Card">
+            <div
+                class="relative overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg hover:shadow-2xl bg-white">
+
+                <!-- Icono del servicio -->
+                <div class="w-full h-48 flex justify-center items-center bg-gray-100">
+                    <fa-icon class="text-5xl text-blue-500" [icon]="card.icon"></fa-icon>
                 </div>
-                <p class="text-base font-monospace text-black">{{ card.title }}</p>
+
+                <!-- Información del servicio siempre visible debajo del icono -->
+                <div class="px-4 py-3 text-center">
+                    <p class="mb-1 text-lg font-monospace text-gray-800">{{ card.title }}</p>
+                </div>
             </div>
         </div>
     </div>

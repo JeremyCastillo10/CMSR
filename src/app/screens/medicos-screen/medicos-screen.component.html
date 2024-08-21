@@ -1,0 +1,46 @@
+<div class="relative bg-cover bg-center bg-no-repeat"
+    style="background-image: url('https://sanrafaelrd.com/RecursosDeLaWeb/baner/banerr.jpg'); height: 250px;">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+    <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-4xl flex flex-col sm:flex-row items-stretch gap-4">
+            <!-- Campo de búsqueda -->
+            <input type="text" placeholder="Buscar por nombre o especialidad" [(ngModel)]="searchTerm"
+                (focus)="onInputFocus()"
+                class="flex-1 px-4 py-2 text-sm shadow-md focus:outline-none focus:ring-4 focus:ring-blue-400 focus:border-transparent transition-all duration-300 ease-in-out" />
+
+            <!-- ComboBox para filtrar por especialidad -->
+            <select [(ngModel)]="selectedEspecialidad"
+                class="w-full sm:w-56 px-4 py-2 text-sm bg-gray-100 border border-gray-300 rounded-md shadow-md focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all duration-300 ease-in-out">
+                <option value="" disabled selected>Especialidad</option>
+                <option *ngFor="let especialidad of especialidades" [value]="especialidad">
+                    {{ especialidad }}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- Tarjetas de médicos -->
+<div class="px-4 py-8 sm:px-6 md:px-12 lg:px-24 xl:px-32">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div *ngFor="let card of filteredMedicos" class="w-full max-w-xs mx-auto" aria-label="Doctor Card">
+            <div
+                class="relative overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg hover:shadow-2xl bg-white">
+
+                <!-- Imagen del médico -->
+                <div class="w-full h-56 flex justify-center items-center bg-gray-100">
+                    <img class="object-contain max-h-full" [src]="card.imagenUrl"
+                        alt="{{ card.nombre }} - {{ card.especialidad }}" />
+                </div>
+
+                <!-- Información del médico siempre visible debajo de la imagen -->
+                <div class="px-4 py-3 text-center">
+                    <p class="mb-1 text-lg font-monospace text-gray-800">{{ card.nombre }}</p>
+                    <p class="mb-2 text-sm text-gray-600">{{ card.especialidad }}</p>
+                    <p class="text-xs text-gray-500">{{ card.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

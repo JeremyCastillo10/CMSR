@@ -11,25 +11,32 @@ import { Component } from '@angular/core';
 export class SucursalesScreenComponent {
   CardSucursales = [
     {
+      nombre: 'Principal',
+      ubicacion: "Av Anibal Garcia 91, Tenares 34000",
+      imagenUrl: "https://sanrafaelrd.com/RecursosDeLaWeb/sucursales/cmsr.jpg",
+      correo: "tenares@vidable.com",
+      telefono: "+1 809-587-8050"
+    },
+    {
       nombre: 'Vidable Tenares',
       ubicacion: "C. Sanchez 148, Tenares 34000",
-      imagenUrl: "https://i.postimg.cc/h4CdjxfZ/vidable-tenares.jpg",
+      imagenUrl: "https://sanrafaelrd.com/RecursosDeLaWeb/sucursales/tenaresvidable.jpg",
       correo: "tenares@vidable.com",
-      telefono: "+1 809-555-1234"
+      telefono: "+1 809-587-9090"
     },
     {
       nombre: 'Vidable Salcedo',
       ubicacion: "C/ Colon esquna, C. Dr. Guido Cabral, Salcedo 34000",
-      imagenUrl: "https://i.postimg.cc/L6wvJGnW/vidable-salcedo.jpg",
+      imagenUrl: "https://sanrafaelrd.com/RecursosDeLaWeb/sucursales/salcedovidable.jpg",
       correo: "salcedo@vidable.com",
-      telefono: "+1 809-555-5678"
+      telefono: "+1 809-587-9090"
     },
     {
       nombre: 'Vidable Villa Tapia',
       ubicacion: "Sanchez casi esquina C/ San Rafael, Villa Tapia",
-      imagenUrl: "https://i.postimg.cc/MTm1tFZz/villa-tapia-vidable.jpg",
+      imagenUrl: "https://sanrafaelrd.com/RecursosDeLaWeb/sucursales/villatapiavidable.jpeg",
       correo: "villatapia@vidable.com",
-      telefono: "+1 809-555-9012"
+      telefono: "+1 809-587-9090"
     },
   ];
 

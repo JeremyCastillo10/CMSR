@@ -1,38 +1,37 @@
 <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-    <p class="font-normal text-sm leading-3 text-black hover:text-gray-800 cursor-pointer pb-2 font-monospace">Sobre
+    <p class="font-monospace font-normal text-sm leading-3 text-black hover:text-gray-800 cursor-pointer pb-2">Sobre
         Nosotros</p>
     <div class="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
         <div class="w-full lg:w-6/12">
-            <h2 class="w-full font-bold lg:text-4xl text-3xl lg:leading-10 text-blue-400 leading-9 font-monospace">
+            <h2 class="font-monospace font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 text-blue-400">
                 Centro Médico San Rafael: Promoviendo la Salud y el Bienestar en Tenares
             </h2>
-            <p class="font-normal text-base leading-6 text-black mt-6 font-monospace">
+            <p class="font-monospace font-normal text-base leading-6 text-gray-700 mt-6">
                 El Centro Médico San Rafael es una institución de salud dedicada a proporcionar atención médica integral
                 y de alta calidad a la comunidad de Tenares, República Dominicana. Nuestro objetivo es asegurar que
                 todos nuestros pacientes reciban la mejor atención posible, en un entorno seguro y acogedor.
             </p>
         </div>
         <div class="w-full lg:w-6/12">
-            <img class="lg:block hidden w-full" src="https://i.postimg.cc/ZYjT1D49/equipo.jpg"
-                alt="personal médico en reunión" />
-            <img class="lg:hidden sm:block hidden w-full" src="https://i.postimg.cc/ZYjT1D49/equipo.jpg"
-                alt="personal médico en reunión" />
-            <img class="sm:hidden block w-full" src="https://i.postimg.cc/ZYjT1D49/equipo.jpg"
-                alt="personal médico en reunión" />
+            <img class="lg:block hidden w-full rounded-lg shadow-lg"
+                src="https://sanrafaelrd.com/RecursosDeLaWeb/nosotros/equipo.jpg" alt="personal médico en reunión" />
+            <img class="lg:hidden sm:block hidden w-full rounded-lg shadow-lg"
+                src="https://sanrafaelrd.com/RecursosDeLaWeb/nosotros/equipo.jpg" alt="personal médico en reunión" />
+            <img class="sm:hidden block w-full rounded-lg shadow-lg"
+                src="https://sanrafaelrd.com/RecursosDeLaWeb/nosotros/equipo.jpg" alt="personal médico en reunión" />
         </div>
     </div>
 
-
     <div class="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
         <div class="w-full lg:w-6/12">
-            <h2 class="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-blue-500 font-monospace">Nuestra
+            <h2 class="font-monospace font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-blue-400">Nuestra
                 Misión</h2>
-            <p class="font-normal text-base leading-6 text-black mt-6 w-full lg:w-10/12 xl:w-9/12 font-monospace">
+            <p class="font-monospace font-normal text-base leading-6 text-gray-700 mt-6 w-full lg:w-10/12 xl:w-9/12">
                 En el Centro Médico San Rafael, nuestra misión es ofrecer atención médica de excelencia, centrada en el
                 paciente y basada en los más altos estándares de calidad. Estamos comprometidos con la promoción de la
                 salud y el bienestar en nuestra comunidad, brindando servicios integrales y accesibles para todos.
             </p>
-            <p class="font-normal text-base leading-6 text-black w-full lg:w-10/12 xl:w-9/12 mt-10 font-monospace">
+            <p class="font-monospace font-normal text-base leading-6 text-gray-700 w-full lg:w-10/12 xl:w-9/12 mt-10">
                 Trabajamos con un equipo de profesionales altamente capacitados que utilizan tecnología avanzada y
                 métodos de vanguardia para garantizar una atención eficaz y humana. Nuestro objetivo es ser un referente
                 en salud en Tenares, contribuyendo al desarrollo de una comunidad más saludable y resiliente.
@@ -41,14 +40,15 @@
         <div class="w-full lg:w-6/12">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
                 <!-- Tarjeta de Visión -->
-                <div class="flex p-4 shadow-md">
+                <div class="flex p-4 bg-white shadow-md rounded-lg">
                     <div class="mr-6 w-12 h-12 bg-blue-500 rounded-full flex justify-center items-center">
-                        <fa-icon [icon]="icons[4]" class="text-white text-3xl font-monospace"></fa-icon>
+                        <fa-icon [icon]="icons[4]" class="text-white text-3xl"></fa-icon>
                     </div>
                     <div>
-                        <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black font-monospace">
-                            Visión</p>
-                        <p class="mt-2 font-normal text-base leading-6 text-black font-monospace">
+                        <p class="font-monospace font-semibold lg:text-2xl text-xl leading-5 text-black">
+                            Visión
+                        </p>
+                        <p class="font-monospace font-normal text-base leading-6 text-gray-700 mt-2">
                             Ser percibidos como la institución médica más confiable de la región, reconocida por sus
                             atenciones, calidad humana y médicos comprometidos con el paciente.
                         </p>
@@ -56,14 +56,15 @@
                 </div>
 
                 <!-- Tarjeta de Valores -->
-                <div class="flex p-4 shadow-md">
+                <div class="flex p-4 bg-white shadow-md rounded-lg">
                     <div class="mr-6 w-12 h-12 bg-blue-500 rounded-full flex justify-center items-center">
-                        <fa-icon [icon]="icons[5]" class="text-white text-2xl font-monospace"></fa-icon>
+                        <fa-icon [icon]="icons[5]" class="text-white text-2xl"></fa-icon>
                     </div>
                     <div>
-                        <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black font-monospace">
-                            Valores</p>
-                        <p class="mt-2 font-normal text-base leading-6 text-black font-monospace">
+                        <p class="font-monospace font-semibold lg:text-2xl text-xl leading-5 text-black">
+                            Valores
+                        </p>
+                        <p class="font-monospace font-normal text-base leading-6 text-gray-700 mt-2">
                             Ética, Confidencialidad, Compromiso, Honestidad, Responsabilidad, Amistad, Empatía.
                         </p>
                     </div>
@@ -75,11 +76,10 @@
     <!-- Nueva sección al final -->
     <div class="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12 mt-16">
         <div class="w-full lg:w-6/12">
-            <h2 class="w-full font-bold lg:text-4xl text-3xl lg:leading-10 text-blue-400 leading-9 font-monospace">
+            <h2 class="font-monospace font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 text-blue-400">
                 Nuestros Fundadores
             </h2>
-            <p class="font-normal text-base leading-6 text-black mt-6 font-monospace">
-
+            <p class="font-monospace font-normal text-base leading-6 text-gray-700 mt-6">
                 El Centro Médico San Rafael inició sus labores bajo la visión y el compromiso de los doctores José
                 Aníbal García, Alfredo Rosario y Luz Divina García, quienes, con determinación y esfuerzo, lograron
                 convertir un sueño en una realidad tangible. Desde sus inicios, estos destacados profesionales
@@ -94,7 +94,8 @@
             </p>
         </div>
         <div class="w-full lg:w-6/12">
-            <img class="w-full shadow-lg" src="https://i.postimg.cc/tgF94yZk/fundadore.png"
+            <img class="w-full shadow-lg rounded-lg"
+                src="https://sanrafaelrd.com/RecursosDeLaWeb/nosotros/fundadore.png"
                 alt="Imagen de los fundadores del Centro Médico San Rafael" />
         </div>
     </div>

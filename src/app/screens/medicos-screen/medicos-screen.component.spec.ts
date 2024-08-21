@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FlagNavComponent } from './flag-nav.component';
+import { MedicosScreenComponent } from './medicos-screen.component';
 
-describe('FlagNavComponent', () => {
-  let component: FlagNavComponent;
-  let fixture: ComponentFixture<FlagNavComponent>;
+describe('MedicosScreenComponent', () => {
+  let component: MedicosScreenComponent;
+  let fixture: ComponentFixture<MedicosScreenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FlagNavComponent]
+      imports: [MedicosScreenComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FlagNavComponent);
+    fixture = TestBed.createComponent(MedicosScreenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

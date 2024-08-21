@@ -8,13 +8,15 @@ import { NosotrosScreenComponent } from './screens/nosotros-screen/nosotros-scre
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { ServicesScreenComponent } from './screens/services-screen/services-screen.component';
 import { SucursalesScreenComponent } from './screens/sucursales-screen/sucursales-screen.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MedicosScreenComponent } from './screens/medicos-screen/medicos-screen.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeScreenComponent },
     { path: 'nosotros', component: NosotrosScreenComponent },
     { path: 'servicios', component: ServicesScreenComponent },
     { path: 'surcursales', component: SucursalesScreenComponent },
-    { path: 'contacto', component: ContactoComponent },
+    { path: 'medicos', component: MedicosScreenComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
