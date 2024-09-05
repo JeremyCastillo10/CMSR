@@ -1,0 +1,95 @@
+<div class="px-4 py-8 sm:px-6 md:px-12 lg:px-24 xl:px-32">
+    <!-- Mostrar animación de carga mientras isLoading sea true -->
+    <div *ngIf="isLoading" class="flex justify-center items-center h-96">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Mostrar contenido de artículos cuando no esté cargando -->
+    <div *ngIf="!isLoading">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Últimas Novedades en Salud</h1>
+            <p class="text-lg text-gray-700">Descubre los artículos más recientes y mantente al tanto de nuestras
+                últimas actualizaciones sobre salud y bienestar.</p>
+        </div>
+
+        <!-- Tarjetas de artículos -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div *ngFor="let articulo of articulos | paginate: { itemsPerPage: itemsPerPage, currentPage: p }"
+                class="w-full max-w-sm mx-auto" aria-label="Artículo Card">
+                <a [routerLink]="['/articulo', articulo.id]" class="block">
+                    <div
+                        class="relative overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg hover:shadow-2xl bg-white h-80">
+                        <!-- Imagen del artículo -->
+                        <div class="w-full h-48 flex justify-center items-center bg-gray-100 overflow-hidden">
+                            <img [src]="articulo.imagenPrincipal || 'assets/placeholder-image.jpg'"
+                                [alt]="articulo.titulo ? articulo.titulo : 'Imagen del artículo'"
+                                class="object-cover w-full h-full" />
+                        </div>
+
+                        <!-- Información del artículo -->
+                        <div class="px-4 py-2 text-left flex flex-col justify-between h-32">
+                            <p class="mb-2 text-lg font-semibold text-gray-800">{{ articulo.titulo }}</p>
+                            <div class="flex items-center justify-leftr gap-2 text-sm text-gray-600">
+                                <fa-icon [icon]="faCalendar" class="fa-icon"></fa-icon>
+                                <!-- Usa el componente de Font Awesome -->
+                                <p>hace {{ articulo.diasCreado }} días</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Controles de paginación -->
+        <div class="mt-8 flex justify-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilo para la animación de carga */
+    .loader {
+        border: 8px solid #f3f3f3;
+        /* Color de fondo */
+        border-top: 8px solid #3498db;
+        /* Color del borde superior */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    /* Animación de giro */
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Ajuste de tamaño para las tarjetas */
+    .relative {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .h-80 {
+        height: 20rem;
+        /* Ajusta la altura a tu necesidad */
+    }
+
+    .h-48 {
+        height: 12rem;
+        /* Ajusta la altura de la imagen a tu necesidad */
+    }
+
+    .h-32 {
+        height: 8rem;
+        /* Ajusta la altura del contenido a tu necesidad */
+    }
+</style>

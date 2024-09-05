@@ -13,7 +13,7 @@ export class InicioComponent {
   images: string[] = [
     'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/inauguracion.jpg',
     'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/Instalacion-CMSR.jpg',
-    'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/InicioDR (1).jpg'
+    'https://sanrafaelrd.com/RecursosDeLaWeb/inicio/InicioDR.jpg'
   ];
   currentImage: string = this.images[0];
   private imageIndex: number = 0;

@@ -1,9 +1,7 @@
-export class CardMedicos {
-    constructor(
-        public id: number,
-        public nombre: string,
-        public especialidad: string,
-        public descripcion: string,
-        public ImagenUrl: string,
-    ) { }
+export interface Medico {
+    id: string;
+    nombre: string;
+    descripcion: string;
+    especialidadId: number;
+    imagenBase64?: string;
 }

@@ -18,18 +18,20 @@
         </p>
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div *ngFor="let card of visibleCardList" class="w-full max-w-xs mx-auto" aria-label="Doctor Card">
+        <div *ngFor="let card of filteredMedicos | slice:0:8" class="w-full max-w-xs mx-auto" aria-label="Doctor Card">
             <div
-                class="relative overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg hover:shadow-2xl bg-white h-80">
-                <div class="aspect-w-4 aspect-h-3">
-                    <img class="object-cover w-full h-full" [src]="card.imagenUrl"
-                        alt="{{ card.nombre }} - {{ card.especialidad }}" />
+                class="relative overflow-hidden transition-transform duration-300 transform rounded-lg shadow-lg hover:shadow-2xl bg-white">
+
+                <!-- Imagen del médico -->
+                <div class="w-full h-56 flex justify-center items-center bg-gray-100">
+                    <img [src]="card.imagenUrl || 'assets/placeholder-image.jpg'"
+                        alt="{{ card.nombre }} - {{ card.descripcion }}" class="object-contain max-h-full" />
                 </div>
-                <div
-                    class="absolute inset-0 flex flex-col justify-center px-4 py-3 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                    <p class="mb-1 text-lg font-bold text-gray-100">{{ card.nombre }}</p>
-                    <p class="mb-2 text-xs text-gray-100">{{ card.especialidad }}</p>
-                    <p class="text-xs tracking-wide text-gray-400">{{ card.descripcion }}</p>
+
+                <!-- Información del médico -->
+                <div class="px-4 py-3 text-center">
+                    <p class="mb-1 text-lg font-monospace text-gray-800">{{ card.nombre }}</p>
+                    <p class="text-sm text-gray-600">{{ card.especialidadNombre }}</p>
                 </div>
             </div>
         </div>
